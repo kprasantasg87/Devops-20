@@ -1,3 +1,2 @@
 #!/bin/bash
-cd /tmp
-touch a.txt
+echo "my new file"
