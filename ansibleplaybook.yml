@@ -1,5 +1,5 @@
 ---
-- hosts: server
+- hosts: localhost
   become: yes
   tasks:
     - name: install 
