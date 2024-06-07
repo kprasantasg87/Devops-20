@@ -3,7 +3,7 @@
   connection: local
   gather_facts: yes
   tasks:
-    - name: install 
-      apt:
-        name: git
-        state: present
+    - name: file creation 
+      file:
+        name: /tmp/a.txt
+        state: touch
