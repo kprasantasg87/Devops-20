@@ -7,3 +7,7 @@
       file:
         name: /tmp/prasanta.txt
         state: touch
+    - name: directory creation
+      file:
+        name: /tmp/demo
+        state: directory
