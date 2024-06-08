@@ -6,3 +6,8 @@
       file:
         name: /tmp/a.txt
         state: touch
+    - name: install
+      apt:
+        file:
+          name: /tmp/a
+          state: directory
