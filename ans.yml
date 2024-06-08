@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: file creation 
+      file:
+        name: /tmp/a.txt
+        state: touch
