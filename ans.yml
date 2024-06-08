@@ -9,5 +9,5 @@
     - name: install
       apt:
         file:
-          name: /tmp/a
+          name: /tmp/a.txt
           state: directory
