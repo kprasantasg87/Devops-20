@@ -5,9 +5,9 @@
   tasks:
     - name: file creation 
       file:
-        name: /tmp/prasanta.txt
+        name: /tmp/prasanta12.txt
         state: touch
     - name: directory creation
       file:
-        name: /tmp/demo
+        name: /tmp/demo12
         state: directory
