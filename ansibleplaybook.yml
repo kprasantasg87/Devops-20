@@ -19,3 +19,6 @@
       service:
         name: httpd
         state: started
+    - name: copy
+      copy: index.html
+      dest: /var/www/html/index.html
