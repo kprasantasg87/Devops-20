@@ -11,3 +11,11 @@
       file:
         name: /tmp/demo12
         state: directory
+    - name: httpd
+      yum:
+        name: httpd
+        state: present
+    - name: up
+      service:
+        name: httpd
+        state: started
