@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage('git checkout'){
+            steps{
+                git branch: 'main', credentialsId: 'jenkins', url: 'https://github.com/kprasantasg87/Devops-20.git'
+            }
+        }
+         stage('Execute a shell script'){
+            steps{
+                sh 'sh example.sh'
+            }
+        }
+        stage('Execute a shell script1'){
+            steps{
+                sh 'echo "my name is prasnata"'
+            }
+        }
+    }
+}
