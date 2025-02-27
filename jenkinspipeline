@@ -1,19 +1,18 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('git checkout'){
-            steps{
-                git branch: 'main', credentialsId: 'jenkins', url: 'https://github.com/kprasantasg87/Devops-20.git'
-            }
-        }
-         stage('Execute a shell script'){
-            steps{
-                sh 'sh example.sh'
-            }
-        }
-        stage('Execute a shell script1'){
-            steps{
-                sh 'echo "my name is prasnata"'
+    parameters {
+  choice choices: ['DEV', 'UAT', 'PROD'], description: 'Chose an ENV', name: 'ENV'
+}
+
+
+    stages {
+        stage('git checkout ') {
+            steps {
+               script{
+                   if(params.ENV == 'UAT'){
+                      sh 'touch a.txt'
+                   }
+               }
             }
         }
     }
